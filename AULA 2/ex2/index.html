@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartao Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Card</h1>
+            <form id="mainForm">
+                <label for="userName">Nome: </label>
+                <input type="text" id="userName" name="userName" onchange="getData()">
+                <label for="userRole">Cargo: </label>
+                <input type="text" id="userRole" name="userRole" onchange="getData()">
+                <select onchange="getData()" name="colors" id="colors">
+                    <option value="black">Preto</option>
+                    <option value="white">Branco</option>
+                    <option value="blue">Azul</option>
+                    <option value="red">Vermelho</option>
+                    <option value="green">Verde</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="card">
+            <label id="name">nome</label><br>
+            <label id="role">cargo</label>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

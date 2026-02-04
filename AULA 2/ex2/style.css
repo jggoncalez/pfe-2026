@@ -1,0 +1,85 @@
+main {
+    position: flex;
+    flex-direction: row;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+main div {
+    flex: 1;
+}
+
+main div:first-child h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+main div:first-child form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main div:first-child label {
+    font-weight: bold;
+    color: #555;
+}
+
+main div:first-child input,
+main div:first-child select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+main div:first-child button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+main div:first-child button:hover {
+    background-color: #0056b3;
+}
+
+#card label {
+    margin: 10px;
+    font-size: 20px;
+    line-height: 50px;
+    color: #333;
+}
+
+.black {
+    background-color: #333;
+    color: white;
+}
+.white {
+    background-color: #fff;
+    color: #333;
+}
+
+.blue {
+    background-color: #007bff;
+    color: white;
+}
+
+.green {
+    background-color: #28a745;
+    color: white;
+}
+
+.red {
+    background-color: #dc3545;
+    color: white;
+}
