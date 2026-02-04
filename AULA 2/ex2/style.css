@@ -53,6 +53,10 @@ main div:first-child button:hover {
     background-color: #0056b3;
 }
 
+#card {
+    border-radius: 10px;
+}
+
 #card label {
     margin: 10px;
     font-size: 20px;
