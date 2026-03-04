@@ -1,0 +1,50 @@
+@media screen and (min-width: 1200px) {
+    img {
+        height: 200px;
+        width: 150px;
+    };
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    img {
+        height: 150px;
+        width: 112px;
+    }
+    body{
+        background-color: rgb(255, 246, 168);
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    img {
+        height: 125px;
+        width: 100px;
+    }
+    body{
+        background-color: rgb(255, 251, 0);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    img {
+        height: 150px;
+        width: 75px;
+    }
+    body{
+        background-color: rgb(255, 170, 12);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        height: 75px;
+        width: 60px;
+    }
+    body{
+        background-color: rgb(255, 0, 0);
+    }
+}
