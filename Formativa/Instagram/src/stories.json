@@ -1,0 +1,37 @@
+[
+  {
+    "profile": "sakura_vibes",
+    "picture": "https://picsum.photos/seed/sakura/600/400",
+    "seen": true
+  },
+  {
+    "profile": "ramen_hunter",
+    "picture": "https://picsum.photos/seed/ramen/600/400",
+    "seen": false
+  },
+  {
+    "profile": "dev_nomad_42",
+    "picture": "https://picsum.photos/seed/laptop/600/400",
+    "seen": true
+  },
+  {
+    "profile": "nara_deer_girl",
+    "picture": "https://picsum.photos/seed/deer/600/400",
+    "seen": false
+  },
+  {
+    "profile": "warehouse_watcher",
+    "picture": "https://picsum.photos/seed/warehouse/600/400",
+    "seen": true
+  },
+  {
+    "profile": "kenji_foto",
+    "picture": "https://picsum.photos/seed/camera/600/400",
+    "seen": false
+  },
+  {
+    "profile": "miso_dreams",
+    "picture": "https://picsum.photos/seed/miso/600/400",
+    "seen": true
+  }
+]
