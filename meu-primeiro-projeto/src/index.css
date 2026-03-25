@@ -1,0 +1,308 @@
+/* =============================================
+   App.css — Frutiger Aero Edition 🌿💧
+   Aqua glass · Nature gradients · Y2K shine
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Comfortaa:wght@400;600;700&display=swap');
+
+/* --- Variáveis Frutiger Aero --- */
+:root {
+  --aqua:        #00c6e0;
+  --aqua-light:  #7ef0ff;
+  --aqua-dark:   #0093b0;
+  --green:       #4dd97a;
+  --green-light: #a8ffca;
+  --green-dark:  #1aad50;
+  --sky:         #c8f0ff;
+  --sky2:        #e8faff;
+  --white-glass: rgba(255,255,255,0.55);
+  --white-glass2:rgba(255,255,255,0.30);
+  --border-glass:rgba(255,255,255,0.75);
+  --shadow-aqua: 0 8px 32px rgba(0,198,224,0.22);
+  --shadow-glow: 0 0 24px rgba(0,198,224,0.35);
+  --text:        #0d3b52;
+  --text-muted:  #4a8fa8;
+  --radius:      22px;
+  --radius-sm:   12px;
+  --font-main:   'Nunito', sans-serif;
+  --font-display:'Comfortaa', cursive;
+}
+
+/* ===================== BODY ===================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-main);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* Gradiente de céu + natureza Frutiger Aero */
+  background:
+    radial-gradient(ellipse at 70% 0%,   #b8f0ff 0%, transparent 55%),
+    radial-gradient(ellipse at 0%  60%,  #c5fce0 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 90%, #d0f4ff 0%, transparent 50%),
+    linear-gradient(160deg, #e0f8ff 0%, #d4f5e9 40%, #c8efff 100%);
+}
+
+/* Orbs decorativas flutuando — puro Frutiger Aero */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+body::before {
+  width: 340px; height: 340px;
+  top: -80px; right: -80px;
+  background: radial-gradient(circle at 35% 35%,
+    rgba(126,240,255,0.55) 0%,
+    rgba(0,198,224,0.18) 50%,
+    transparent 70%);
+  animation: floatOrb 9s ease-in-out infinite;
+}
+
+body::after {
+  width: 280px; height: 280px;
+  bottom: -60px; left: -60px;
+  background: radial-gradient(circle at 40% 40%,
+    rgba(77,217,122,0.45) 0%,
+    rgba(0,198,224,0.12) 55%,
+    transparent 72%);
+  animation: floatOrb 12s ease-in-out infinite reverse;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translateY(0px) scale(1);    }
+  50%       { transform: translateY(22px) scale(1.05); }
+}
+
+/* ===================== ROOT ===================== */
+#root {
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 50px 22px 70px;
+}
+
+/* ===================== TYPOGRAPHY ===================== */
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+
+  /* Gradiente aqua no texto */
+  background: linear-gradient(135deg, #007fa8 0%, #00c6e0 45%, #4dd97a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  filter: drop-shadow(0 2px 8px rgba(0,198,224,0.25));
+  animation: fadeUp 0.6s ease both;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 55%;
+  margin-top: 10px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--aqua), var(--green), transparent);
+  animation: slideGlow 0.8s ease both 0.3s;
+}
+
+@keyframes slideGlow {
+  from { width: 0; opacity: 0; }
+  to   { width: 55%; opacity: 1; }
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.65;
+  font-weight: 600;
+  animation: fadeUp 0.6s ease both 0.1s;
+}
+
+/* Seção de título da aula */
+div > h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--aqua-dark);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+hr {
+  border: none;
+  height: 1.5px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(0,198,224,0.4),
+    rgba(77,217,122,0.4),
+    transparent);
+  margin: 0 0 28px;
+}
+
+/* ===================== GLASS CARDS ===================== */
+div[style*="f0f0f0"] {
+  background: var(--white-glass) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1.5px solid var(--border-glass) !important;
+  border-radius: var(--radius) !important;
+  box-shadow:
+    var(--shadow-aqua),
+    inset 0 1.5px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 0 rgba(0,198,224,0.08) !important;
+  padding: 26px 28px !important;
+  margin-bottom: 20px !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Brilho interno no topo — icônico Frutiger Aero */
+div[style*="f0f0f0"]::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.65) 0%,
+    rgba(255,255,255,0.0) 100%
+  );
+  border-radius: 0 0 50% 50%;
+  pointer-events: none;
+}
+
+/* Reflexo de luz no canto — efeito espelho d'água */
+div[style*="f0f0f0"]::after {
+  content: '';
+  position: absolute;
+  top: 8px; right: 14px;
+  width: 48px; height: 18px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+/* h2 dentro dos cards */
+div[style*="f0f0f0"] h2 {
+  font-family: var(--font-display) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--aqua-dark) !important;
+  margin-bottom: 16px !important;
+  letter-spacing: -0.01em !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================== BOTÕES ===================== */
+button {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 11px 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+
+  background: linear-gradient(160deg,
+    #00daf5 0%,
+    #00a8cc 40%,
+    #0093b5 100%
+  );
+
+  box-shadow:
+    0 4px 18px rgba(0,198,224,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    inset 0 -2px 0 rgba(0,0,0,0.08);
+
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Brilho interno no botão — highlight clássico Aero */
+button::before {
+  content: '';
+  position: absolute;
+  top: 1px; left: 8%; right: 8%;
+  height: 48%;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.55) 0%,
+    rgba(255,255,255,0.0) 100%
+  );
+  border-radius: 50px 50px 60% 60%;
+  pointer-events: none;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 10px 30px rgba(0,198,224,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.6),
+    inset 0 -2px 0 rgba(0,0,0,0.08);
+}
+
+button:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow:
+    0 2px 8px rgba(0,198,224,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/* ===================== ANIMAÇÕES ===================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+div[style*="f0f0f0"]:nth-of-type(1) { animation: fadeUp 0.55s ease both 0.15s; }
+div[style*="f0f0f0"]:nth-of-type(2) { animation: fadeUp 0.55s ease both 0.28s; }
+div[style*="f0f0f0"]:nth-of-type(3) { animation: fadeUp 0.55s ease both 0.41s; }
+
+/* ===================== CURSOR PERSONALIZADO ===================== */
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Ccircle cx='11' cy='11' r='9' fill='rgba(0,198,224,0.3)' stroke='%2300c6e0' stroke-width='1.5'/%3E%3Ccircle cx='11' cy='11' r='3' fill='%2300c6e0'/%3E%3C/svg%3E") 11 11, auto;
+}
+
+/* ===================== SCROLLBAR ===================== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track {
+  background: rgba(200,240,255,0.4);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--aqua), var(--green));
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 480px) {
+  h1    { font-size: 1.9rem; }
+  #root { padding: 28px 14px 50px; }
+  button { padding: 10px 22px; font-size: 0.88rem; }
+  div[style*="f0f0f0"] { padding: 20px 18px !important; }
+}
